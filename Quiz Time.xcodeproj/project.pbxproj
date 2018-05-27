@@ -12,6 +12,8 @@
 		D414660720BA2A120019B194 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D414660520BA2A120019B194 /* Main.storyboard */; };
 		D414660920BA2A130019B194 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D414660820BA2A130019B194 /* Assets.xcassets */; };
 		D414660C20BA2A130019B194 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D414660A20BA2A130019B194 /* LaunchScreen.storyboard */; };
+		D414661620BA2C000019B194 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = D414661520BA2C000019B194 /* Question.swift */; };
+		D414661820BA2C4F0019B194 /* QuestionBank.swift in Sources */ = {isa = PBXBuildFile; fileRef = D414661720BA2C4F0019B194 /* QuestionBank.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		D414660820BA2A130019B194 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D414660B20BA2A130019B194 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D414660D20BA2A130019B194 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D414661520BA2C000019B194 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		D414661720BA2C4F0019B194 /* QuestionBank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionBank.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +58,40 @@
 		D414660020BA2A120019B194 /* Quiz Time */ = {
 			isa = PBXGroup;
 			children = (
-				D414660120BA2A120019B194 /* AppDelegate.swift */,
-				D414660320BA2A120019B194 /* ViewController.swift */,
-				D414660520BA2A120019B194 /* Main.storyboard */,
-				D414660820BA2A130019B194 /* Assets.xcassets */,
+				D414661920BA2C5B0019B194 /* Model */,
+				D414661320BA2B630019B194 /* View */,
+				D414661420BA2B970019B194 /* Controller */,
 				D414660A20BA2A130019B194 /* LaunchScreen.storyboard */,
 				D414660D20BA2A130019B194 /* Info.plist */,
 			);
 			path = "Quiz Time";
+			sourceTree = "<group>";
+		};
+		D414661320BA2B630019B194 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D414660820BA2A130019B194 /* Assets.xcassets */,
+				D414660520BA2A120019B194 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D414661420BA2B970019B194 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D414660120BA2A120019B194 /* AppDelegate.swift */,
+				D414660320BA2A120019B194 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D414661920BA2C5B0019B194 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D414661520BA2C000019B194 /* Question.swift */,
+				D414661720BA2C4F0019B194 /* QuestionBank.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,6 +165,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D414661620BA2C000019B194 /* Question.swift in Sources */,
+				D414661820BA2C4F0019B194 /* QuestionBank.swift in Sources */,
 				D414660420BA2A120019B194 /* ViewController.swift in Sources */,
 				D414660220BA2A120019B194 /* AppDelegate.swift in Sources */,
 			);
@@ -283,6 +315,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 84Q2R7NFMX;
 				INFOPLIST_FILE = "Quiz Time/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -290,7 +323,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.johnpospisil.Quiz-Time";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -301,6 +334,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 84Q2R7NFMX;
 				INFOPLIST_FILE = "Quiz Time/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -308,7 +342,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.johnpospisil.Quiz-Time";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
